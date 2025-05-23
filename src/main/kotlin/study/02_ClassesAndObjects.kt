@@ -11,7 +11,6 @@ fun main() {
     val person = Person("John", 30)
     println(person.name)      // getter 자동 호출
     person.age = 31           // setter 자동 호출
-    
     // 2. 데이터 클래스 사용
     val user1 = User("Alice", 25)
     val user2 = User("Alice", 25)
@@ -73,7 +72,7 @@ class Person(
     
     // 메소드
     fun introduceYourself() {
-        println("안녕하세요, 제 이름은 $name이고, 나이는 $age입니다.")
+        println("안녕하세요, 제 이름은 `$name`이고, 나이는 `$age`입니다.")
     }
 }
 
@@ -123,7 +122,7 @@ class Dog(override val name: String) : Animal(name) {
 // 상속과 주 생성자 사용
 open class Person2(val name: String, var age: Int) {
     open fun introduceYourself() {
-        println("안녕하세요, 제 이름은 $name이고, 나이는 $age입니다.")
+        println("안녕하세요, 제 이름은 `$name`이고, 나이는 `$age`입니다.")
     }
 }
 
@@ -135,7 +134,7 @@ class Employee(
     
     override fun introduceYourself() {
         super.introduceYourself()
-        println("직업은 $jobTitle입니다.")
+        println("직업은 `$jobTitle`입니다.")
     }
 }
 
@@ -168,7 +167,7 @@ abstract class AbstractShape {
     
     // 비추상 메소드
     fun display() {
-        println("$name의 넓이: ${area()}")
+        println("`$name`의 넓이: ${area()}")
     }
 }
 
